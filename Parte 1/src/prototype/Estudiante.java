@@ -1,11 +1,12 @@
 package src.prototype;
 
 public class Estudiante {
+
     private String nombre;
-    private Long id;
+    private long id;
     private int creditos;
 
-    public Estudiante(String nombre, Long id, int creditos) {
+    public Estudiante(String nombre, long id, int creditos) {
         this.nombre = nombre;
         this.id = id;
         this.creditos = creditos;
@@ -20,5 +21,14 @@ public class Estudiante {
     @Override
     public Estudiante clone() {
         return new Estudiante(this);
+    }
+
+    @Override
+    public String toString() {
+        return "Estudiante{" +
+                "nombre='" + nombre + '\'' +
+                ", id=" + id +
+                ", creditos=" + creditos +
+                '}';
     }
 }

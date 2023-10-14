@@ -5,9 +5,13 @@ public class Empleado {
     private String nombre;
     private long id;
 
-    public Empleado(String nombre, Long id) {
+    public Empleado(String nombre, long id) {
         this.nombre = nombre;
         this.id = id;
+    }
+
+    public static EmpleadoBuilder builder() {
+        return new EmpleadoBuilder();
     }
 
     @Override
@@ -18,9 +22,6 @@ public class Empleado {
                 '}';
     }
 
-    public static EmpleadoBuilder builder() {
-        return new EmpleadoBuilder();
-    }
     public static class EmpleadoBuilder {
 
         private String nombre;
@@ -31,7 +32,7 @@ public class Empleado {
             return this;
         }
 
-        public EmpleadoBuilder id(Long id) {
+        public EmpleadoBuilder id(long id) {
             this.id = id;
             return this;
         }
@@ -40,6 +41,4 @@ public class Empleado {
             return new Empleado(nombre, id);
         }
     }
-
-
 }

@@ -1,6 +1,6 @@
 package src.factorymethod;
 
-public class PizzaSalami implements Pizza{
+public class PizzaSalami implements Pizza {
     @Override
     public String getTipoMasa() {
         return "Gruesa";
@@ -14,5 +14,11 @@ public class PizzaSalami implements Pizza{
     @Override
     public String getToppings() {
         return "Salami";
+    }
+
+    public String toString() {
+        return getTipoMasa() + " " +
+                getTipoQueso() + " " +
+                getToppings();
     }
 }
